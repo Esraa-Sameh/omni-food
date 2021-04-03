@@ -155,7 +155,8 @@ a:hover, a:active{
 /*BUTTONS*/
 /*------------------*/
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type=submit] {
   display: inline-block;
   padding: 10px 30px;
   font-weight: 300;
@@ -165,7 +166,8 @@ a:hover, a:active{
   transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type=submit] {
   color: #ffffff;
   background-color: #e67e22;
   margin-right: 15px;
@@ -179,7 +181,9 @@ a:hover, a:active{
   color: #fff;
 }
 .btn:hover,
-.btn-active {
+.btn-active,
+input[type=submit]:hover,
+input[type=submit]:active {
   background-color: #cf6d17 !important;
   border: 1px solid #cf6d17;
 }
@@ -388,4 +392,86 @@ list-style: none;
 .plan-box div:last-child{
     text-align: center;
     border: 0;
+}
+
+/*----------------------------*/
+/*FORM*/
+/*----------------------------*/
+.contact-form{
+  width: 60%;
+  margin: 0 auto;
+}
+input[type=text], input[type=email], select, textarea{
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+textarea{
+  height: 100px;
+}
+input[type=checkbox]{
+  margin: 10px 5px 10px 0;
+}
+*:focus{
+  outline: none;
+}
+
+/*----------------------------*/
+/*FOOTER*/
+/*----------------------------*/
+footer{
+  background-color: #333;
+  padding: 40px;
+  font-size: 80%;
+}
+.footer-nav{
+  list-style: none;
+  float: left;
+}
+.social-links{
+  list-style: none;
+  float: right;
+}
+.footer-nav li, .social-links li{
+  display: inline-block;
+  margin: 20px;
+}
+.footer-nav li:last-child, .social-links li:last-child{
+  margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a{
+  text-decoration: none;
+  border: none;
+  color: #888;
+  transition: color 0.2s;
+}
+.footer-nav li a:hover,
+.footer-nav li a:active{
+  color: #ddd;
+}
+footer p{
+  color: #888;
+  text-align: center;
+  font-size: 90%;
+  margin-top: 20px;
+}
+.social-links li a{
+  font-size: 160%;
+  transition: color 0.2s;
+}
+.social-links li a:hover{
+  cursor: pointer;
+}
+.facebook:hover{
+  color: #3b5998;
+}
+.twitter:hover{
+  color: #00acee;
+}
+.instagram:hover{
+  color: #e95950;
 }
