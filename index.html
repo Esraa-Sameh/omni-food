@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Omni Food</title>
     <link rel="stylesheet" type="text/css" href="./vendors/css/grid.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" type="text/css" href="./Resources/css/style.css" />
     <link rel="stylesheet" type="text/css" href="./vendors/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./Resources/css/queries.css" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -24,11 +27,16 @@
             alt="Omnifood logo"
             class="logo"
           />
+          <img
+            src="./Resources/images/logo.png"
+            alt="Omnifood logo"
+            class="logo-black"
+          />
           <ul class="main-nav">
-            <li><a href="#">Food delivery</a></li>
-            <li><a href="#">How it works</a></li>
-            <li><a href="#">Our cities</a></li>
-            <li><a href="#">Sign up</a></li>
+            <li><a href="#features">Food delivery</a></li>
+            <li><a href="#works">How it works</a></li>
+            <li><a href="#cities">Our cities</a></li>
+            <li><a href="#plans">Sign up</a></li>
           </ul>
           <div class="clearfix"></div>
         </div>
@@ -38,11 +46,11 @@
           Goodbye junk food. <br />
           Hello super healthy meals.
         </h1>
-        <a class="btn btn-full" href="#">I’m hungry</a>
-        <a class="btn btn-ghost" href="#">Show me more</a>
+        <a class="btn btn-full" href="#" id="plansBtn">I’m hungry</a>
+        <a class="btn btn-ghost" href="#" id="showMoreBtn">Show me more</a>
       </div>
     </header>
-    <section class="section-features">
+    <section class="section-features" id="features">
       <div class="row">
         <h2>Get food fast &mdash; not fast food</h2>
         <p class="long-copy">
@@ -51,7 +59,7 @@
           we’re really good at it, we promise!
         </p>
       </div>
-      <div class="row">
+      <div class="row js--wp-1">
         <div class="col span-1-of-4 box">
           <ion-icon class="icon-big" name="infinite-outline"></ion-icon>
           <h3>Up to 365 days/year</h3>
@@ -157,30 +165,30 @@
         </li>
       </ul>
     </section>
-    <section class="section-steps">
+    <section class="section-steps" id="works">
       <div class="row">
         <h2>How it works - Simple as 1, 2, 3</h2>
       </div>
       <div class="row">
         <div class="steps-box col span-1-of-2">
-          <img class="app-screen" src="./Resources/images/app-iPhone.png" />
+          <img class="app-screen js--wp-2" src="./Resources/images/app-iPhone.png" />
         </div>
         <div class="steps-box col span-1-of-2">
-          <div class="works-step">
+          <div class="works-step clearfix">
             <div>1</div>
             <p>
               Choose the subscription plan that best fits your needs and sign up
               today.
             </p>
           </div>
-          <div class="works-step">
+          <div class="works-step clearfix">
             <div>2</div>
             <p>
               Order your delicious meal using our mobile app or website. Or you
               can even call us!
             </p>
           </div>
-          <div class="works-step">
+          <div class="works-step clearfix">
             <div>3</div>
             <p>
               Enjoy your meal after less than 20 minutes. See you the next time!
@@ -199,11 +207,11 @@
         </div>
       </div>
     </section>
-    <section class="section-cities">
-      <div class="row">
+    <section class="section-cities" id="cities">
+      <div>
         <h2>We're currently in these cities</h2>
       </div>
-      <div class="row">
+      <div class="row row  js--wp-3">
         <div class="col span-1-of-4 box">
           <img src="./Resources/images/lisbon-3.jpg" alt="Lisbon" />
           <h3>Lisbon</h3>
@@ -307,13 +315,13 @@
         </div>
       </div>
     </section>
-    <section class="section-plans">
+    <section class="section-plans" id="plans">
       <div class="row">
         <h2>Start eating healthy today</h2>
       </div>
       <div class="row">
         <div class="col span-1-of-3">
-          <div class="plan-box">
+          <div class="plan-box js--wp-4">
             <div>
               <h3>Premium</h3>
               <p class="plan-price">399$<span>/ month</span></p>
@@ -520,7 +528,7 @@
     </section>
     <footer>
       <div class="row">
-        <div class="col span-1-of-2">
+        <div class="col span-2-of-3">
           <ul class="footer-nav">
             <li><a href="#">About us</a></li>
             <li><a href="#">Blog</a></li>
@@ -529,7 +537,7 @@
             <li><a href="#">Android app</a></li>
           </ul>
         </div>
-        <div class="col span-1-of-2">
+        <div class="col span-1-of-3">
           <ul class="social-links">
             <li>
               <a><ion-icon class="facebook" name="logo-facebook"></ion-icon></a>
@@ -538,15 +546,28 @@
               <a><ion-icon class="twitter" name="logo-twitter"></ion-icon></a>
             </li>
             <li>
-              <a><ion-icon class="instagram" name="logo-instagram"></ion-icon></a>
+              <a
+                ><ion-icon class="instagram" name="logo-instagram"></ion-icon
+              ></a>
             </li>
           </ul>
         </div>
       </div>
       <div class="row">
-        <p>Copyright &copy; 2021 by Omnifood. All rights reserved </p>
+        <p>Copyright &copy; 2021 by Omnifood. All rights reserved</p>
       </div>
     </footer>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
+      integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./vendors/javascript/script.js"></script>
   </body>
 </html>

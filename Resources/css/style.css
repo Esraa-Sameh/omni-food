@@ -13,6 +13,10 @@ html {
   font-size: 20px;
   font-weight: 300;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+body{
+  overflow-x: hidden  ;
 }
 .clearfix::after {
     content: "";
@@ -223,6 +227,9 @@ header {
   float: left;
   margin-top: 20px;
 }
+.logo-black{
+  display: none;
+}
 .main-nav {
   float: right;
   list-style: none;
@@ -246,7 +253,36 @@ header {
 .main-nav li a:active {
   border-bottom: 2px solid #cf6d17;
 }
-
+.sticky{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.959);
+  box-shadow: 0 2px 2px #efefefef;
+  z-index: 10;
+}
+.sticky .logo-black{
+  display: block;
+  height: 50px;
+  width: auto;
+  float: left;
+  margin: 5px 0;
+}
+.sticky .logo{
+  display: none;
+}
+.sticky .main-nav{
+  margin-top: 18px;
+}
+.sticky .main-nav li a:link, 
+.sticky .main-nav li a:visited{
+  color: #555;
+  padding: 16px 0;
+}
+.sticky .main-nav{
+  margin-top: 15px;
+}
 
 /*----------------------------*/
 /*STEPS*/
@@ -424,6 +460,7 @@ footer{
   background-color: #333;
   padding: 40px;
   font-size: 80%;
+  font-weight: 500;
 }
 .footer-nav{
   list-style: none;
@@ -446,7 +483,7 @@ footer{
 .social-links li a{
   text-decoration: none;
   border: none;
-  color: #888;
+  color: #bfbfbf;
   transition: color 0.2s;
 }
 .footer-nav li a:hover,
@@ -454,7 +491,7 @@ footer{
   color: #ddd;
 }
 footer p{
-  color: #888;
+  color: #bfbfbf;
   text-align: center;
   font-size: 90%;
   margin-top: 20px;
@@ -474,4 +511,22 @@ footer p{
 }
 .instagram:hover{
   color: #e95950;
+}
+
+
+/*ANIMATIONS*/
+.js--wp-1,
+.js--wp-2,
+.js--wp-3{
+  opacity: 0;
+  animation-duration: 1s;
+  /* transition: opacity 600ms; */
+}
+.js--wp-4{
+  animation-duration: 1s;
+}
+.js--wp-1.animate__fadeInUp,
+.js--wp-2.animate__fadeInUp,
+.js--wp-3.animate__fadeInUp{
+  opacity: 1;
 }
