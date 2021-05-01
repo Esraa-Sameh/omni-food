@@ -55,19 +55,47 @@ $(document).ready(function () {
       offset: "50%",
     }
   );
-  $('.js--wp-2').waypoint(function(direction) {
-    $('.js--wp-2').addClass('animate__animated animate__fadeInUp');
-}, {
-    offset: '50%'
-});
-$('.js--wp-3').waypoint(function(direction) {
-    $('.js--wp-3').addClass('animate__animated animate__fadeIn');
-}, {
-    offset: '50%'
-});
-$('.js--wp-4').waypoint(function(direction) {
-    $('.js--wp-4').addClass('animate__animated animate__pulse');
-}, {
-    offset: '50%'
-});
+  $(".js--wp-2").waypoint(
+    function (direction) {
+      $(".js--wp-2").addClass("animate__animated animate__fadeInUp");
+    },
+    {
+      offset: "50%",
+    }
+  );
+  $(".js--wp-3").waypoint(
+    function (direction) {
+      $(".js--wp-3").addClass("animate__animated animate__fadeIn");
+    },
+    {
+      offset: "50%",
+    }
+  );
+  $(".js--wp-4").waypoint(
+    function (direction) {
+      $(".js--wp-4").addClass("animate__animated animate__pulse");
+    },
+    {
+      offset: "50%",
+    }
+  );
+
+  //burger menu
+  $(".mobile-nav-icon").on("click", function () {
+    $(".main-nav").toggleClass("shown");
+    //<ion-icon name="close-outline"></ion-icon>
+    if ($('#burger')[0]["name"] === 'menu-outline'){
+      $('#burger')[0]["name"] = 'close-outline';
+    }
+    else{
+      $('#burger')[0]["name"] = 'menu-outline';
+    }
+  });
+  $(window).resize(function () {
+    var windowsize = $(window).width();
+    if (windowsize > 768) {
+      $(".main-nav").removeClass("shown");
+      $('#burger')[0]["name"] = 'menu-outline';
+    }
+  });
 });
