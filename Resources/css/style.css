@@ -357,7 +357,7 @@ header {
 /*TESTIMONIALS*/
 /*----------------------------*/
 .section-testimonials{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.801),rgba(0, 0, 0, 0.808)), url("../../Resources/images/back-customers.jpg") ;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.801),rgba(0, 0, 0, 0.808)), url("../../resources/images/back-customers.jpg") ;
     background-size: cover;
     color: #fff;
     background-attachment: fixed;
